@@ -1,4 +1,4 @@
 <?php
 
-$string['pluginname'] = 'Hierarquia Corporativa';
+$string['pluginname'] = 'Template do Vue';
 $string['helloworld'] = 'Olá Mundo!';
