@@ -1,4 +1,4 @@
-import Vue from '../node_modules/vue/dist/vue.js';
+import Vue from 'local_vue/Vue';
 import App from 'local_vue/components/App.vue';
 
 export const init = (selector) => {
