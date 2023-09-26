@@ -6,7 +6,7 @@ It uses Vue 2.7.4 version and build files using Moodle _Gruntfile.js_ properties
 
 The app runs with the `/build/app.min.js` file and the Vue components are declared in `/rc/components/*.vue.js`, using this termination to identify then, since we cannot use _.vue_ files here.
 
-More information on how to declare components of Vue you can find in [components-registration]{https://br.vuejs.org/v2/guide/components-registration}.
+More information on how to declare components of Vue you can find in [components-registration](https://br.vuejs.org/v2/guide/components-registration).
 
 ## Instalation
 
