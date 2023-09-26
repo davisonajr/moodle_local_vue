@@ -33,7 +33,7 @@ $PAGE->navbar->add(get_string('pluginname', 'local_vue'));
 
 echo $OUTPUT->header();
 echo $OUTPUT->heading(get_string('pluginname', 'local_vue'));
-$renderable = new \local_vue\output\index_page('app-main');
+$renderable = new \local_vue\output\index_page('#app-main');
 $output = $PAGE->get_renderer('local_vue');
 
 echo $output->render($renderable);

@@ -4,7 +4,7 @@ import App from 'local_vue/components/App.vue';
 export const init = (selector) => {
 
     new Vue({
-        el: '#'+selector,
+        el: selector,
         template:
         `
             <App />
