@@ -2,7 +2,7 @@ import * as Str from 'core/str';
 
 export default{
     name: 'HelloWorld',
-    template: 
+    template:
     `
         <h1>{{ text }}</h1>
     `,

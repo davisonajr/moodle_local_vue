@@ -1,11 +1,12 @@
-
-import HelloWorld from 'local_vue/components/HelloWorld';
+import HelloWorld from 'local_vue/components/HelloWorld.vue';
 
 export default {
     name: 'App',
-    template: 
+    template:
     `
-        <HelloWorld/>
+        <div class="d-flex justify-content-center">
+            <HelloWorld />
+        </div>
     `,
     components: {
         HelloWorld
