@@ -26,5 +26,5 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->component = 'local_vue';
 $plugin->release = '0.1';
 $plugin->version = 2023092500;
-$plugin->requires = 2023042401;
+$plugin->requires = 2023042400;
 $plugin->maturity = MATURITY_ALPHA;
