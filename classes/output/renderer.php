@@ -40,13 +40,20 @@ class renderer extends plugin_renderer_base {
         $data = $page->export_for_template($this);
         
         $PAGE->requires->js_call_amd(
-            'local_vue/app',
+            'local_vue/app2',
             'init',
             [
-                $data->element_id
+                $data->element_id.'-2'
             ]
         );
-        
+
+        $PAGE->requires->js_call_amd(
+            'local_vue/app3',
+            'init',
+            [
+                $data->element_id.'-3'
+            ]
+        );
         return parent::render_from_template('local_vue/index-page', $data);                                                         
     }
 }

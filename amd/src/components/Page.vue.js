@@ -4,15 +4,20 @@ export default{
     name: 'HelloWorld',
     template:
     `
-        <h1>{{ text }}</h1>
+        <div class="d-flex justify-content-center">
+            <h1>{{ text }} {{ page }}</h1>
+        </div>
     `,
     data() {
         return {
             text: ''
         };
     },
-    beforeCreate() {
-        Str.get_string('helloworld','local_vue')
+    props: [
+        'page'
+    ],
+    beforeCreate(props) {
+        Str.get_string('using','local_vue')
         .then((string) => {
             this.text = string;
         });
