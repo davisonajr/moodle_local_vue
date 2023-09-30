@@ -31,6 +31,8 @@ export const init = (selector) => {
   // whole app router-aware.
   app.use(router);
 
+  app.config.compilerOptions.delimiters =  ['{%', '%}'];
+
   app.mount(selector);
 };
 

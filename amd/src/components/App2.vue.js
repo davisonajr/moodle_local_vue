@@ -1,14 +1,15 @@
 import Page from 'local_vue/components/Page.vue';
 
+let component = 'App2';
+
 export default {
-    name: 'App2',
-    template:
-    `
-        <div class="d-block">
-            <h1> Página 2 </h1>
-            <Page page='2'/>
-        </div>
-    `,
+    name: component,
+    template: `#${component}-template`,
+    data() {
+        return {
+            page: 2,
+        };
+    },
     components: {
         Page
     }
