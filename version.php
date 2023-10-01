@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
- * Version - Vue Template.
+ * Version - Vue Local Plugin template.
  * @package    local_vue
  * @copyright  2023 Davison Ramos <davison.ajr@gmail.com>
  * @author     Davison Ramos
