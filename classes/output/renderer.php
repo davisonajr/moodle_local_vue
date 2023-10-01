@@ -28,6 +28,7 @@ use plugin_renderer_base;
 
 class renderer extends plugin_renderer_base {
     private $data;
+
     /**                                                                                                                             
      * Defer to template.                                                                                                           
      *                                                                                                                              
@@ -39,7 +40,6 @@ class renderer extends plugin_renderer_base {
         global $PAGE;         
 
         $this->data = $page->export_for_template($this);
-        $this->print_x_templates();
 
         $PAGE->requires->js_call_amd(
             'local_vue/app',
@@ -50,12 +50,5 @@ class renderer extends plugin_renderer_base {
         );
 
         return parent::render_from_template('local_vue/index-page', $this->data);                                                         
-    }
-    private function print_x_templates(){
-
-        echo parent::render_from_template(
-            'local_vue/components',
-            (array) $this->data
-        );    
     }
 }
