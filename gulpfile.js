@@ -4,7 +4,7 @@ var rename          = require('gulp-rename');
 var vueComponent    = require('gulp-vue-single-file-component');
 var run             = require('gulp-run');
 
-gulp.task('vue', () => gulp.src('./amd/vue/*.vue')
+gulp.task('vue', () => gulp.src('./amd/src/components/*.vue')
     .pipe(vueComponent({ debug: true, loadCssMethod: 'loadCss' }))
     .pipe(babel({ plugins: ['@babel/plugin-transform-modules-amd'] }))
     .pipe(rename({ extname: '.vue.js' }))
@@ -14,7 +14,6 @@ gulp.task('vue', () => gulp.src('./amd/vue/*.vue')
 
 gulp.task('watch', () => {
  
-    gulp.watch('./vue/*.vue', gulp.parallel('vue'));
+    gulp.watch('./amd/src/components/*.vue', gulp.parallel('vue'));
 });
  
-gulp.task('default', gulp.parallel('vue','watch'));
