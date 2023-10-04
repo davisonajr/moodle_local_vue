@@ -12,7 +12,8 @@ class index_page implements renderable, templatable {
     var $element_id = null;
 
     public function __construct($element_id) {
-        $this->element_id = $element_id;                                                                                                
+
+        $this->element_id = $element_id;                                                                                         
     }
 
     /**                                                                                                                             
@@ -24,7 +25,6 @@ class index_page implements renderable, templatable {
 
         $data = new stdClass();
         $data->element_id = $this->element_id;
-
         return $data;
     }
 }

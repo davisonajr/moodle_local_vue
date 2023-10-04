@@ -27,6 +27,8 @@ use plugin_renderer_base;
  */
 
 class renderer extends plugin_renderer_base {
+    private $data;
+
     /**                                                                                                                             
      * Defer to template.                                                                                                           
      *                                                                                                                              
@@ -37,16 +39,16 @@ class renderer extends plugin_renderer_base {
     public function render_index_page($page) {
         global $PAGE;         
 
-        $data = $page->export_for_template($this);
-        
+        $this->data = $page->export_for_template($this);
+
         $PAGE->requires->js_call_amd(
             'local_vue/app',
             'init',
             [
-                $data->element_id
+                $this->data->element_id
             ]
         );
-        
-        return parent::render_from_template('local_vue/index-page', $data);                                                         
+
+        return parent::render_from_template('local_vue/index-page', $this->data);                                                         
     }
 }
